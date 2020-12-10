@@ -5,7 +5,13 @@ import './App.css';
 // import MyComponent from './MyComponent';
 // import Counter from './Counter';
 // import Say from './Say';
-import ForceUpdateExample from './ForceUpdateExample';
+// import ForceUpdateExample from './example/ForceUpdateExample';
+import Customer from './components/Customer';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import Table from '@material-ui/core/Table';
 // /**
 //  * react의 component를 활용
 //  */
@@ -51,7 +57,74 @@ import ForceUpdateExample from './ForceUpdateExample';
 // const App = () => {
 //   return <MyComponent/>;
 // };
+// const App = () => {
+//     return <ForceUpdateExample/>;
+// };
+const customers = [
+  {
+    'id':1,
+    'image':'./images/아이유1.jpeg',
+    'name':'아이유',
+    'birthday':'1993-05-13',
+    'gender':'여자',
+    'job':'가수'
+  }
+,
+{
+  'id':2,
+  'image':'./images/아이유1.jpeg',
+  'name':'아이유',
+  'birthday':'1993-05-13',
+  'gender':'여자',
+  'job':'가수'
+}
+
+,{
+  'id':3,
+  'image':'./images/아이유1.jpeg',
+  'name':'아이유',
+  'birthday':'1993-05-13',
+  'gender':'여자',
+  'job':'가수'
+}
+
+
+
+]
+
+
 const App = () => {
-    return <ForceUpdateExample/>;
+  return (
+    <Table>
+     <TableHead>
+			<TableRow>
+			<TableCell>번호</TableCell>
+			<TableCell>이미지</TableCell>
+			<TableCell>이름</TableCell>
+			<TableCell>생년월일</TableCell>
+			<TableCell>성별</TableCell>
+			<TableCell>직업</TableCell>
+			</TableRow>
+			</TableHead>
+
+      <TableBody>
+
+      {customers.map(customer => { 
+			  return  <Customer  key = {customer.id} 
+			                     id={customer.id}
+                          image={customer.image}
+                          name={customer.name}
+                          birthday={customer.birthday}
+                          gender={customer.gender}
+                          job={customer.job} 
+                />
+			  })
+			}
+
+
+      </TableBody> 
+    </Table>
+
+  ) 
 };
 export default App;
