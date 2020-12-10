@@ -1,4 +1,17 @@
+/**
+ * JSX를 사용하기 위한 필 수 선언
+ */
 import React from 'react';
+/**
+ * 컴포넌트라는 것을 화면에 그리기위한 라이브러리
+ * React/JSX를 사용하면 자바스크립트 코드 내부에서 HTML 작성가능
+ * JSX 는 변수 또는 상수 값을 태그 내부에 곧바로 채워넣을 수 있습니다.
+ * 템플릿 엔진처럼 사용
+ * 바벨에 의해 자바스크립트로 변환되고 실행됩니다.
+ * 컴포넌트의 이름 첫번째 글자는 반드시 대문자
+ * import 문에서 파일 이름의 확장자를 생략해도 해당 파일을 자동으로 찾을 수 있게 설정 되어 있다.
+ *  (webpack moduel resolution 이 처리 해준다.)
+ */
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
