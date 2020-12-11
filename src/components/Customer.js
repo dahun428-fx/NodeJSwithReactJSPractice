@@ -4,6 +4,7 @@
 import React, {Component, Fragment} from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import CustomerDel from './CustomerDel';
 /**
  * EntityComponent 개념
  * Class 형 Component ---> React의 Component를 상속받아야 한다.
@@ -27,6 +28,10 @@ render(){
 			<TableCell><p>{this.props.birthday}</p></TableCell>
             <TableCell><p>{this.props.gender}</p></TableCell>
             <TableCell><p>{this.props.job}</p></TableCell>
+            <TableCell><CustomerDel stateRefresh={this.props.stateRefresh} 
+                                    id={this.props.id}/>
+            </TableCell>
+            
 		 </TableRow>
 
     );
